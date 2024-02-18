@@ -20,10 +20,10 @@ const page = ({ params }: { params: { slug: string } }) => {
             </p>
           </div>
           <div className="md:grid grid-cols-2 gap-4 pt-8">
-            <div className="flex justify-end">
+            <div className="flex md:justify-end">
               <Image src={product.image.front} alt={product.name} className="rounded-2xl h-[300px] w-[250px]" />
             </div>
-            <div className="product-info w-2/4">
+            <div className="product-info w-2/4 pt-4">
               <p>{product.name}</p>
               <p className="font-bold py-2">Price:</p>
               <p>{product.price}</p>
@@ -35,7 +35,7 @@ const page = ({ params }: { params: { slug: string } }) => {
       </section>
       <section>
         <div className="container mx-auto pb-32">
-          <h2 className="text-5xl text-center pt-8">You May Also Like</h2>
+          <h2 className="text-sm text-center pt-8">Recently Viewed</h2>
           <ProductSlide />
         </div>
       </section>
