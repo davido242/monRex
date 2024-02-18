@@ -24,7 +24,7 @@ const page = ({ params }: { params: { slug: string } }) => {
               <Image src={product.image.front} alt={product.name} className="rounded-2xl h-[300px] w-[250px]" />
             </div>
             <div className="product-info w-2/4 pt-4">
-              <p>{product.name}</p>
+              <p className="uppercase text-slate-300 font-bold">{product.name}</p>
               <p className="font-bold py-2">Price:</p>
               <p>{product.price}</p>
               <p className="font-bold py-2">Description:</p>
