@@ -6,15 +6,7 @@ export default function Home() {
   return (
     <>
       <main className="min-h-screen bg-white pt-36">        
-          <div className="relative w-full">
-            <Image
-              src="/assets/images/landing-banner.webp"
-              className="hidden md:block"
-              alt="banner"
-              height="641"
-              width="2500"
-              priority
-            />
+          <div className="relative w-full bg-[url('/assets/images/landing-banner.webp')] min-h-[35rem] bg-cover bg-center">
             <Image
               src="/assets/images/mobile-banner.webp"
               className="md:hidden"
@@ -40,14 +32,14 @@ export default function Home() {
             </div>
             <ProductSlide />
           </div>
-          <div className="relative w-full">
-            <Image
+          <div className="relative w-full bg-[url('/assets/images/WEB-KIDS.webp')] min-h-[35rem] bg-cover bg-center">
+            {/* <Image
               src="/assets/images/WEB-KIDS.webp"
               className="hidden md:block"
               alt="kids banner"
               height="641"
               width="2500"
-            />
+            /> */}
             <Image
               src="/assets/images/MOB-KIDS.webp"
               className="md:hidden"
@@ -64,14 +56,14 @@ export default function Home() {
           <div>
             <h2 className="text-5xl text-center py-8">New Arrivals</h2>
           </div>
-          <div className="relative w-full">
-            <Image
+          <div className="relative w-full bg-[url('/assets/images/TRAINNING-WEB-BANNER.webp')] min-h-[35rem] bg-cover bg-center">
+            {/* <Image
               src="/assets/images/TRAINNING-WEB-BANNER.webp"
               className="hidden md:block"
               alt="Training banner"
               height="641"
               width="2500"
-            />
+            /> */}
             <Image
               src="/assets/images/TRAINING-MOB-BANNER.webp"
               className="md:hidden"
