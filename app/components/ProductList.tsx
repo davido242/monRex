@@ -25,7 +25,7 @@ export default function Product() {
                     </div>
                   </div>
                   <Image src={product.image.front} alt={product.name} className="rounded-2xl h-auto" />
-                  <div className="hidden absolute group-hover:block bottom-2 left-0 p-2 w-full rounded-lg">
+                  <div className="hidden absolute group-hover:block duration-300 bottom-2 left-0 p-2 w-full rounded-lg">
                     <Link href="#" className="bg-white text-center w-full inline-block py-4 rounded-full">Quick View</Link>
                   </div>
                 </div>
