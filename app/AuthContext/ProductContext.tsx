@@ -8,9 +8,9 @@ type Product = {
   image: string
 }
 
-type ProductC = {
+type ProductProps = {
   products?: Product[];
   setProducts?: (products: Product[]) => void
 }
 
-export const ProductContext = createContext<ProductC>({})
+export const ProductContext = createContext<ProductProps>({})
