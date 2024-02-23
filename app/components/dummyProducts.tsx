@@ -28,7 +28,7 @@ const dummyProduct: Product[] = [
       back: kidsBack1,
     },
     name: "Lumos Jacket - Cement Grey",
-    price: "$64.99",
+    price: "£64.99",
     description: "Free publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual."
   },
   {
@@ -37,8 +37,8 @@ const dummyProduct: Product[] = [
       front: kidsFront2,
       back: kidsBack2,
     },
-    name: "Jacket - Cement",
-    price: "$44.99",
+    name: "Lumos Jacket - Black",
+    price: "£44.99",
     description: "Cruslor lishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a dum."
   },
   {
@@ -48,7 +48,7 @@ const dummyProduct: Product[] = [
       back: kidsBack3,
     },
     name: "Lumos Jacket - Cement Grey",
-    price: "$34.59",
+    price: "£34.59",
     description: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relyin"
   },
   {
@@ -58,7 +58,7 @@ const dummyProduct: Product[] = [
       back: kidsBack4,
     },
     name: "Men Jacket",
-    price: "$78.59",
+    price: "£78.59",
     description: "Dolor lishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document."
   },
 ];
