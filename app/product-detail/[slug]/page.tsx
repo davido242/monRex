@@ -3,10 +3,10 @@ import { Products } from "../../components/dummyProducts";
 import Image from "next/image";
 import ProductSlide from "../../components/ProductList";
 import Link from "next/link";
+import starRating from "../../../public/assets/images/star.svg";
 
 const page = ({ params }: { params: { slug: string } }) => {
   const product = Products.find((item) => item.slug === params.slug);
-  
 
   return (
     <>
@@ -22,20 +22,58 @@ const page = ({ params }: { params: { slug: string } }) => {
           </div>
           <div className="md:grid grid-cols-2 gap-4 pt-8">
             <div className="md:pl-24">
-              <Image src={product.image.front} alt={product.name} className="rounded-2xl " />
+              <Image src={product.image.front} alt={product.name} className="rounded-2xl" />
             </div>
-            <div className="product-info w-2/4 pt-4 text-xs">
-              <p className="name text-3xl">{product.name}</p>
+            <div className="product-info pt-4 pl-12 text-xs">
+              <p className="name text-3xl pb-8">{product.name}</p>
               <p>{product.price}</p>
-              <p className="font-bold py-2">Description:</p>
-              <p>{product.description}</p>
+              <div className="flex items-center border-b pt-2 pb-8">
+                <Image src={starRating} alt="rating" />
+                <Image src={starRating} alt="rating" />
+                <Image src={starRating} alt="rating" />
+                <Image src={starRating} alt="rating" />
+                <p className="pl-4">1 rating</p>
+              </div>
+              <div className="flex gap-4 items-center pt-2">
+                <div className="border-4 border-[white]">
+                <Image src={product.image.front} alt={product.name} className="w-32" />
+                </div>
+                <Image src={product.image.back} alt={product.name} className="w-32" />                
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section>
-        <div className="container mx-auto pb-32">
-          <h2 className="text-sm text-center pt-8">Recently Viewed</h2>
+        <div className="container mx-auto px-8 md:px-32 md:pr-48">
+          <p className="font-bold py-2">Description:</p>
+          <p>{product.description}</p>
+          <div className="text-gray-500 flex gap-8 text-xs pt-8">
+            <Link href="#" className="underline">Free Returns</Link>
+            <Link href="#" className="underline">Rapid Delivery</Link>
+            <Link href="#" className="underline">Flexible Payment Options</Link>
+          </div>
+          <ul className="list-disc">
+            <p className="font-bold py-4">Product Details:</p>
+            {[1,2,3,4,5,6].map(() => <li className="py-2">Standard fit</li>)}
+            
+          </ul>
+          <ul className="list-disc">
+            <p className="font-bold py-4">Style Info:</p>
+            {[1,2,3,4,5,6].map(() => <li className="py-2">Colour Shown: Black</li>)}
+            
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div className="container mx-auto pb-8">
+          <h2 className="text-3xl text-center pt-8">You May Also Like</h2>
+          <ProductSlide />
+        </div>
+      </section>
+      <section>
+        <div className="container mx-auto pb-8">
+          <h2 className="text-3xl text-center pt-8">Recently Viewed</h2>
           <ProductSlide />
         </div>
       </section>

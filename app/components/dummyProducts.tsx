@@ -39,7 +39,7 @@ const dummyProduct: Product[] = [
     },
     name: "Lumos Jacket - Black",
     price: "£44.99",
-    description: "Cruslor lishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a dum."
+    description: "Enhance your outdoor activities with the Lumos Jacket in black. Its standard fit provides optimal comfort while the reflective detailing ensures visibility in low light conditions. The adjustable hood, vented back panel, and zip chest pocket make it functional, while the contrast under arm panel adds breathability. Stay comfortable with the elasticated sleeve cuff."
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ const dummyProduct: Product[] = [
     },
     name: "Men Jacket",
     price: "£78.59",
-    description: "Dolor lishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document."
+    description: "Enhance your outdoor activities with the Lumos Jacket in black. Its standard fit provides optimal comfort while the reflective detailing ensures visibility in low light conditions. The adjustable hood, vented back panel, and zip chest pocket make it functional, while the contrast under arm panel adds breathability. Stay comfortable with the elasticated sleeve cuff. Lishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document."
   },
 ];
 
