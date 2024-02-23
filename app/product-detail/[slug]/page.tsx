@@ -21,24 +21,31 @@ const page = ({ params }: { params: { slug: string } }) => {
             </p>
           </div>
           <div className="md:grid grid-cols-2 gap-4 pt-8">
-            <div className="md:pl-24">
+            <div className="sm:pl-2 md:pl-2 lg:pl-24">
               <Image src={product.image.front} alt={product.name} className="rounded-2xl" />
             </div>
-            <div className="product-info pt-4 pl-12 text-xs">
+            <div className="product-info pt-4 pl-12 font-light">
               <p className="name text-3xl pb-8">{product.name}</p>
-              <p>{product.price}</p>
+              <p className="text-xl">{product.price}</p>
               <div className="flex items-center border-b pt-2 pb-8">
                 <Image src={starRating} alt="rating" />
                 <Image src={starRating} alt="rating" />
                 <Image src={starRating} alt="rating" />
                 <Image src={starRating} alt="rating" />
-                <p className="pl-4">1 rating</p>
+                <Image src={starRating} alt="rating" />
+                <p className="pl-4 text-xs">1 rating</p>
               </div>
-              <div className="flex gap-4 items-center pt-2">
-                <div className="border-4 border-[white]">
-                <Image src={product.image.front} alt={product.name} className="w-32" />
+              <div className="flex gap-4 items-center py-4">
+                <div className="border-4 border-[white] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                <Image src={product.image.front} alt={product.name} className="w-20 h-20 object-cover" />
                 </div>
-                <Image src={product.image.back} alt={product.name} className="w-32" />                
+                <div className="border-4 border-[white] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+                <Image src={product.image.back} alt={product.name} className="w-20 h-20 object-cover" />
+                </div>               
+              </div>
+              <div>
+                <button className="uppercase text-white bg-black rounded-full py-4 px-8 w-full hover:bg-slate-900 font-bold my-2">Add to cart</button>
+                <button className="text-white bg-[#5a31f4] rounded-full py-4 px-8 w-full hover:bg-[#7659df] font-bold">Buy with Shop</button>
               </div>
             </div>
           </div>
