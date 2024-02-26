@@ -63,13 +63,7 @@ const dummyProduct: Product[] = [
   },
 ];
 
-function addSlug(product: Product): Product {
-  const generatedSlug = product.name.toLowerCase().replace(/\s+/g, "-").replace(/-+/g, "-");
-
-  return {
+export const Products: Product[] = dummyProduct.map((product) => ({
     ...product,
-    slug: generatedSlug
-  }
-}
-
-export const Products: Product[] = dummyProduct.map(addSlug);
+    slug: product.name.toLowerCase().replace(/\s+/g, "-").replace(/-+/g, "-")
+}));

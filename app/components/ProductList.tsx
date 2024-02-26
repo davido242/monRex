@@ -11,6 +11,7 @@ export default function Product() {
   const router = useRouter();
 
   const [isHovered, setIsHovered] = useState(null);
+  
   const handleMouseOver = (productId: number) => {
     setIsHovered(productId);
   }
