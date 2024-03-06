@@ -17,7 +17,7 @@
 }
 
 .hiddenDropdown {
-  @apply hidden top-24 pt-12 left-0 absolute text-gray-800 group-hover:block w-full;
+  @apply top-24 pt-12 left-0 absolute text-gray-800 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 invisible group-hover:visible;
 }
 
 .bg-brown-bg {

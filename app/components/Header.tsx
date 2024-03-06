@@ -38,9 +38,9 @@ export default function header() {
       </div>
       <div>
         <div className="container mx-auto px-8 py-2 flex justify-between items-center">
-          <button className="uppercase text-black font-bold text-[50px]" onClick={handleHomePage}>
+          <div className="uppercase text-black font-bold text-[50px] cursor-pointer" onClick={handleHomePage}>
             DayRe<span className="text-xl">x</span>
-          </button>
+          </div>
           <div>
             <ul className="hidden md:flex gap-6 text-sm megaMenu">
               <li className="group">

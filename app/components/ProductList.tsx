@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import { NameContext } from "../AuthContext/NameContext";
 import { CartContext } from "../AuthContext/CartContext";
 import { Products }  from "./dummyProducts";
+import "animate.css/animate.compat.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Product() {
   const router = useRouter();
@@ -15,6 +17,7 @@ export default function Product() {
       <div className="p-4 rounded mx-auto">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {Products.map((product) => (
+            <ScrollAnimation animateIn="fadeInUp">
             <div onClick={() => router.push(`/product-detail/${product.slug}`)} className="group cursor-pointer">
               <div key={product.id} className="p-5">
                 <div className="relative">
@@ -39,6 +42,7 @@ export default function Product() {
                 </div>
               </div>
             </div>
+            </ScrollAnimation>
           ))}
         </div>
       </div>

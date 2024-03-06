@@ -4,6 +4,7 @@ import Image from "next/image";
 import ProductSlide from "../../components/ProductList";
 import Link from "next/link";
 import starRating from "../../../public/assets/images/star.svg";
+import AnimateOnLoad from "@/app/components/AnimateOnLoad";
 
 const page = ({ params }: { params: { slug: string } }) => {
   const product = Products.find((item) => item.slug === params.slug);
@@ -22,7 +23,9 @@ const page = ({ params }: { params: { slug: string } }) => {
           </div>
           <div className="md:grid grid-cols-2 gap-4 pt-8">
             <div className="sm:pl-2 md:pl-2 lg:pl-24">
-              <Image src={product.image.front} alt={product.name} className="rounded-2xl" />
+              <AnimateOnLoad>
+                <Image src={product.image.front} alt={product.name} className="rounded-2xl" />
+              </AnimateOnLoad>
             </div>
             <div className="product-info pt-4 pl-12 font-light">
               <p className="name text-3xl pb-8">{product.name}</p>
