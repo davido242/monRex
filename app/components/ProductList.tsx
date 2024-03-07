@@ -1,4 +1,5 @@
 "use client";
+
 import { useContext, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +21,7 @@ export default function Product() {
               <div onClick={() => router.push(`/product-detail/${product.slug}`)} className="group cursor-pointer">
                 <div key={product.id} className="p-5">
                   <div className="relative">
-                    <div className="ratings absolute flex w-full top-0 left-0 p-4 justify-between">
+                    <div className="ratings absolute flex w-full top-0 left-0 p-4 justify-between z-10">
                       <div className="uppercase bg-blue-900 flex items-center justify-center w-[40px] h-[25px] rounded text-xs text-white">
                         New
                       </div>
@@ -31,12 +32,12 @@ export default function Product() {
                     <Image
                       src={product.image.back}
                       alt={product.name}
-                      className="rounded-2xl h-auto group-hover:hidden block"
+                      className="rounded-2xl h-auto opacity-100 transition-opacity duration-300 delay-200  group-hover:opacity-0 group-hover:delay-75 group-hover:invisible visible "
                     />
                     <Image
                       src={product.image.front}
                       alt={product.name}
-                      className="rounded-2xl h-auto hidden group-hover:block"
+                      className="rounded-2xl h-auto invisible group-hover:visible absolute inset-0 z-0"
                     />
                     <div className="hidden absolute group-hover:block duration-300 bottom-2 left-0 p-2 w-full rounded-lg">
                       <Link href="#" className="bg-white text-center w-full inline-block py-4 rounded-full">
