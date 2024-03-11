@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   useEffect(() => {
     setloading(true);
-    fetch("http://localhost:5001/api/user", {
+    fetch("http://localhost:5001/auth/user", {
       method: "GET",
       headers: {
         authorization: `Bearer ${window.localStorage.getItem("token")}`,

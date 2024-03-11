@@ -46,7 +46,8 @@ export default function page() {
                   <div>
                     <h2 className="text-lg uppercase font-bold py-3">{product.name}</h2>
                     <p className="text-sm" id="description">
-                      {"An apple mobile which is nothing like app Up for a Grab".slice(0, 30)}....
+                      {/* {"An apple mobile which is nothing like app Up for a Grab".slice(0, 30)}.... */}
+                      {product.description.slice(0, 30)}....
                     </p>
                     <p className="text-sm font-bold text-[#7f6c6c]">₦ {product.price}</p>
                   </div>
