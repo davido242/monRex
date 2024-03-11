@@ -30,7 +30,7 @@ export default function header() {
   };
 
   return (
-    <header className="bg-white shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] fixed w-full z-[2]">
+    <header className="bg-white shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px] fixed w-full z-[12]">
       <div className="text-white bg-black flex justify-center gap-12 text-sm py-4  ">
         <Image src="/assets/images/arrow-right.svg" className="rotate-180" alt="left icon" width="12" height="15" />
         <p>Free Delivery When You Spend £70+</p>
